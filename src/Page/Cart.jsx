@@ -9,7 +9,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/cart');
+        const response = await axios.get('https://west-side-server-3.onrender.com/cart');
         setCartItems(response.data);
       } catch (error) {
         setError(error.message);
@@ -22,7 +22,7 @@ const Cart = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/cart/${id}`);
+      await axios.delete(`https://west-side-server-3.onrender.com/cart/${id}`);
       const updatedCartItems = cartItems.filter((item) => item.id !== id);
       setCartItems(updatedCartItems);
     } catch (error) {

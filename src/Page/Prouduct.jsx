@@ -7,7 +7,7 @@
    const [product, setProduct] = useState([]);
      const productdata = () => {
      axios
-       .get('http://localhost:8080/product', {
+       .get('https://west-side-server-3.onrender.com/product', {
         params: {
            category: 'Women',
          },

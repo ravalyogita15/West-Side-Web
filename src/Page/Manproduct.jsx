@@ -1,97 +1,3 @@
-
-// import axios from 'axios'
-// import React, { useEffect, useState } from 'react'
-// import { Link } from 'react-router-dom';
-
-
-// const Manproduct = () => {
-//   const [manproduct, setmanproduct] = useState([]);
-
-//   const manproductdata = () => {
-//     axios
-//       .get('http://localhost:8080/product',{
-//         params:{
-//           category:"Men"
-//         }
-//       })
-//       .then((res) => setmanproduct(res.data))
-//       .catch((err) => console.log(err));
-//   };
-
-//   useEffect(() => {
-//     manproductdata();
-//   }, []);
-
-//   return (
-//     <div className="container"style={{backgroundColor:"white"}}>
-//       <div className="manproduct-grid">
-//         {manproduct.map((e) => (
-//           <div key={e.id} className="manproduct-item">
-//             <Link to={`/Description/${e.id}`}>
-//             {localStorage.setItem("endpoint","Manproduct")}
-//                         <img src={e.image[0]} alt="" className="product-image"/>
-//                     </Link>
-//             <div className="manproduct-details">
-//               <h6>{e.category}</h6>
-//               <h6>{e.price}</h6>
-//               <h6>{e.name}</h6>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Manproduct;
-
-
-// import axios from 'axios'
-// import React, { useEffect, useState } from 'react'
-// import { Link } from 'react-router-dom';
-
-
-// const Manproduct = () => {
-//   const [manproduct, setmanproduct] = useState([]);
-
-//   const manproductdata = () => {
-//     axios
-//       .get('http://localhost:8080/product',{
-//         params:{
-//           category:"Men"
-//         }
-//       })
-//       .then((res) => setmanproduct(res.data))
-//       .catch((err) => console.log(err));
-//   };
-
-//   useEffect(() => {
-//     manproductdata();
-//   }, []);
-
-//   return (
-//     <div className="container">
-//       <div className="manproduct-grid">
-//         {manproduct.map((e) => (
-//           <div key={e.id} className="manproduct-item">
-//             <Link to={`/Description/${e.id}`}>
-//             {localStorage.setItem("endpoint","Manproduct")}
-//                         <img src={e.image[0]} alt="" className="product-image"/>
-//                     </Link>
-//             <div className="manproduct-details">
-//               <h6>{e.category}</h6>
-//               <h6>{e.price}</h6>
-//               <h6>{e.name}</h6>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Manproduct;
-
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -100,7 +6,7 @@ const Manproduct = () => {
 
     const manproductdata = () => {
         axios
-            .get('http://localhost:8080/product', {
+            .get('https://west-side-server-3.onrender.com/product', {
                 params: {
                     category: "Men"
                 }
